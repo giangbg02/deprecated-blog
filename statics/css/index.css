@@ -1,3 +1,12 @@
+.maok-fluid {
+    width: 100%;
+    height: 100vh;
+    background : url(../../statics/images/bg.jpg) no-repeat center;
+    background-size: cover;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
 .container {
     margin: 10px auto;
     padding: 0 20px;
@@ -5,6 +14,7 @@
     border-radius: 20px;
     max-width: 100%;
     box-shadow: 5px 5px 8px #c6fafc;
+    background: rgba(255, 255, 255, 0.3);
 }
 
 .icon {
@@ -18,14 +28,15 @@
 
 .main-item {
     border-radius: 4px;
-    background: #fff;
+    background: rgba(255, 255, 255, 0);
 }
 
 .main-item .caption {
     font-size: 16px;
     line-height: 24px;
     padding: 12px 20px 0;
-    color: #565656;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0);
 }
 
 .main-item .caption .icon {
@@ -72,12 +83,12 @@
     display: block;
     height: 90px;
     padding: 12px;
-    border: 1px solid #d4dcdc;
+    border: 1px solid #e3ebeb;
     border-radius: 15px;
+    background: rgba(255, 255, 255, 0.3);
 }
 
 .main-item .list li a:hover {
-    background: none;
     animation: none;
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
@@ -85,6 +96,7 @@
     transform: translateY(-4px);
     -webkit-box-shadow: 0 0 8px #0fa007;
     box-shadow: 0 0 8px #0fa007;
+    background: rgba(255, 255, 255, 0.5);
 }
 
 .main-item .list .title {
@@ -94,7 +106,7 @@
     height: 40px;
     white-space: nowrap;
     text-overflow: ellipsis;
-    color: #3273dc;
+    color: #000fdc;
 }
 
 .main-item .list .title img {
@@ -106,7 +118,7 @@
 
 .main-item .list .desc {
     line-height: 24px;
-    color: #686868;
+    color: #000000;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
