@@ -1,0 +1,139 @@
+.header {
+    height: 60px;
+    background-color: #555555;
+}
+
+.footer {
+    height: 60px;
+    background-color: #555555;
+}
+
+.container {
+    margin: 10px auto;
+    padding: 0 20px;
+    border: 1px solid #daded2;
+    border-radius: 20px;
+    max-width: 100%;
+    box-shadow: 5px 5px 8px #c6fafc;
+}
+
+.icon {
+    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+}
+
+.main-item {
+    border-radius: 4px;
+    background: #fff;
+}
+
+.main-item .caption {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 12px 20px 0;
+    color: #565656;
+}
+
+.main-item .caption .icon {
+    float: left;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.main-item .list {
+    margin-left: -2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.main-item .list li {
+    width: 30%;
+    margin: 10px 0 0 2%;
+    min-width: 210px;
+}
+
+.main-item .list li a {
+    position: relative;
+    display: block;
+    height: 90px;
+    padding: 12px;
+    border: 1px solid #d4dcdc;
+    border-radius: 15px;
+}
+
+.main-item .list li a:hover {
+    background: none;
+    animation: none;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+    -webkit-box-shadow: 0 0 8px #0fa007;
+    box-shadow: 0 0 8px #0fa007;
+}
+
+.main-item .list .title {
+    font-size: 18px;
+    line-height: 40px;
+    overflow: hidden;
+    height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #3273dc;
+}
+
+.main-item .list .title img {
+    float: left;
+    width: auto;
+    height: 30px;
+    margin-right: 8px;
+}
+
+.main-item .list .desc {
+    line-height: 24px;
+    color: #686868;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/*.main-item .list .desc span:hover {
+    color: #ff6000;
+    display: inline-block;
+    padding-left: 100%;  !* 从右至左开始轮播 *!
+    -webkit-animation: marquee 6s linear infinite;
+    animation: marquee 6s linear infinite;
+}
+
+@-webkit-keyframes marquee {
+    0%   { -webkit-transform: translate(0, 0); }
+    100% { -webkit-transform: translate(-100%, 0); }
+}
+
+@keyframes marquee {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}*/
+
+.clearfix:after, .clearfix:before, .container:after, .container:before {
+    font: 0/0 a;
+    display: table;
+    overflow: hidden;
+    content: ' ';
+}
+
+
+div img {
+    cursor: pointer;
+    transition: all 1s;
+}
+
+div img:hover {
+    transform: rotate(360deg) scale(0.7);
+}
