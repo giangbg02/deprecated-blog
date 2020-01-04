@@ -1,4 +1,4 @@
-.maok-fluid {
+.main-body {
     width: 100%;
     height: 100vh;
     background : url(../../statics/images/bg.jpg) no-repeat center;
@@ -13,7 +13,7 @@
     border: 1px solid #daded2;
     border-radius: 20px;
     max-width: 100%;
-    box-shadow: 5px 5px 8px #c6fafc;
+    box-shadow: 2px 2px 8px #c6fafc;
     background: rgba(255, 255, 255, 0.3);
 }
 
@@ -54,27 +54,27 @@
 
 .main-item .list li {
     width: 100%;
-    margin: 0.33333333% 0;
+    margin: 0.5% 0.33333333% 1%;
 }
 
 @media (min-width: 768px) {
     .main-item .list li {
         width: 49%;
-        margin: 0.33333333%;
+        margin: 0.5% 0.33333333% 1%;
     }
 }
 
 @media (min-width: 992px) {
     .main-item .list li {
         width: 49%;
-        margin: 0.33333333%;
+        margin: 0.5% 0.33333333% 1%;
     }
 }
 
 @media (min-width: 1200px) {
     .main-item .list li {
         width: 32%;
-        margin: 0.66666666%;
+        margin: 0.5% 0.66666666% 1%;
     }
 }
 
