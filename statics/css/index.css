@@ -11,7 +11,7 @@
     margin: 10px auto;
     padding: 0 15px;
     border: 1px solid #daded2;
-    border-radius: 6px;
+    border-radius: 10px;
     max-width: 100%;
     box-shadow: 2px 2px 8px #c6fafc;
     background: rgba(255, 255, 255, 0.3);
@@ -58,7 +58,7 @@
     height: 50px;
     padding: 4px;
     border: 1px solid #e3ebeb;
-    border-radius: 6px;
+    border-radius: 10px;
     background: rgba(255, 255, 255, 0.3);
 }
 
