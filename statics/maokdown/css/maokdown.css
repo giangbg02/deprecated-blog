@@ -897,7 +897,42 @@ hr {
     }
 }
 
-/*背景颜色*/
+/*按钮*/
+.maok-btn-lg, .maok-btn-md, .maok-btn-sm, .maok-btn-xs {
+    display: inline-block;
+    text-align: center;
+    font-weight: normal;
+    background-image: none;
+    border: 1px solid grey;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap;
 
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 
-/*文字颜色*/
+    touch-action: manipulation;
+    -ms-touch-action: manipulation;
+}
+
+.maok-btn-lg {
+    padding: 10px 18px;
+    font-size: 18px;
+}
+
+.maok-btn-md {
+    padding: 6px 14px;
+    font-size: 14px;
+}
+
+.maok-btn-sm {
+    padding: 4px 10px;
+    font-size: 12px;
+}
+
+.maok-btn-xs {
+    padding: 2px 6px;
+    font-size: 10px;
+}

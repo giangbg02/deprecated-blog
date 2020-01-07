@@ -9,7 +9,7 @@
 
 .container {
     margin: 10px auto;
-    padding: 0 20px;
+    padding: 0 15px;
     border: 1px solid #daded2;
     border-radius: 20px;
     max-width: 100%;
@@ -26,12 +26,7 @@
     background-size: auto 100%;
 }
 
-.main-item {
-    border-radius: 4px;
-    background: rgba(255, 255, 255, 0);
-}
-
-.main-item .caption {
+.container .caption {
     font-size: 16px;
     line-height: 24px;
     padding: 12px 20px 0;
@@ -39,46 +34,46 @@
     background: rgba(255, 255, 255, 0);
 }
 
-.main-item .caption .icon {
+.container .caption .icon {
     float: left;
     width: 24px;
     height: 24px;
     margin-right: 8px;
 }
 
-.main-item .list {
+.container .list {
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
 }
 
-.main-item .list li {
-    width: 100%;
+.container .list li {
+    width: 49%;
     margin: 0.5% 0.33333333% 1%;
 }
 
 @media (min-width: 768px) {
-    .main-item .list li {
+    .container .list li {
         width: 49%;
         margin: 0.5% 0.33333333% 1%;
     }
 }
 
 @media (min-width: 992px) {
-    .main-item .list li {
+    .container .list li {
         width: 49%;
         margin: 0.5% 0.33333333% 1%;
     }
 }
 
 @media (min-width: 1200px) {
-    .main-item .list li {
+    .container .list li {
         width: 32%;
         margin: 0.5% 0.66666666% 1%;
     }
 }
 
-.main-item .list li a {
+.container .list li a {
     position: relative;
     display: block;
     height: 90px;
@@ -88,7 +83,7 @@
     background: rgba(255, 255, 255, 0.3);
 }
 
-.main-item .list li a:hover {
+.container .list li a:hover {
     animation: none;
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
@@ -99,7 +94,7 @@
     background: rgba(255, 255, 255, 0.5);
 }
 
-.main-item .list .title {
+.container .list .title {
     font-size: 18px;
     line-height: 40px;
     overflow: hidden;
@@ -109,14 +104,14 @@
     color: #000fdc;
 }
 
-.main-item .list .title img {
+.container .list .title img {
     float: left;
     width: auto;
     height: 30px;
     margin-right: 8px;
 }
 
-.main-item .list .desc {
+.container .list .desc {
     line-height: 24px;
     color: #000000;
     overflow: hidden;
@@ -124,7 +119,7 @@
     white-space: nowrap;
 }
 
-/*.main-item .list .desc span:hover {
+/*.container .list .desc span:hover {
     color: #ff6000;
     display: inline-block;
     padding-left: 100%;  !* 从右至左开始轮播 *!
