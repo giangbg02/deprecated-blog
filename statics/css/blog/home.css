@@ -1,0 +1,29 @@
+.main-body {
+    width: 100%;
+    height: 100vh;
+    background : url(../../../statics/images/bg.jpg) no-repeat center;
+    background-size: cover;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+main {
+    height: auto;
+    background-color: rgba(141, 141, 141, 0.21);
+}
+
+header, footer {
+    height: 50px;
+    background-color: rgba(153, 255, 167, 0.2);
+    clear: both;
+}
+
+main > aside {
+    background-color: rgba(146, 184, 177, 0.2);
+    height: auto;
+}
+
+main > section {
+    background-color: rgba(76, 84, 101, 0.2);
+    height: 900px;
+}
