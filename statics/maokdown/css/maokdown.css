@@ -53,13 +53,13 @@ hr {
 .mk-container {
     position: relative;
     margin: 0 auto;
-    padding: 0 15px;;
+    padding: 0;
 }
 
 .mk-fluid {
     position: relative;
     margin: 0 auto;
-    padding: 0 15px
+    padding: 0;
 }
 
 .mk-lg1, .mk-lg2, .mk-lg3, .mk-lg4, .mk-lg5, .mk-lg6,
