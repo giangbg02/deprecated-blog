@@ -33,12 +33,6 @@ main header .avatar {
     justify-content: center;
 }
 
-@media (max-width: 992px) {
-    main header .avatar {
-        display: flex;
-    }
-}
-
 main header .avatar img {
     width: 35px;
     border-radius: 50%;
@@ -88,7 +82,7 @@ main > aside {
     background-color: rgba(184, 42, 108, 0.2);
     position: -webkit-sticky !important;
     position: sticky !important;
-    top: 50px;
+    top: 51px;
 }
 
 main > section {
@@ -99,5 +93,9 @@ main > section {
 @media (max-width: 992px) {
     .mk-hide {
         display: none !important;
+    }
+
+    main header .avatar {
+        display: flex;
     }
 }
