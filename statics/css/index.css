@@ -9,7 +9,7 @@
     overflow-x: hidden;
 }
 
-.container {
+.mk-container {
     margin: 10px auto;
     padding: 0 15px;
     border: 1px solid #daded2;
@@ -36,7 +36,7 @@ ul, ol {
     background-size: auto 100%;
 }
 
-.container .caption {
+.mk-container .caption {
     font-size: 16px;
     line-height: 24px;
     padding: 5px 5px;
@@ -44,26 +44,26 @@ ul, ol {
     background: rgba(255, 255, 255, 0);
 }
 
-.container .caption .icon {
+.mk-container .caption .icon {
     float: left;
     width: 24px;
     height: 24px;
     margin-right: 8px;
 }
 
-.container .list {
+.mk-container .list {
     padding: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
 }
 
-.container .list li {
+.mk-container .list li {
     width: 100%;
     margin: 0.5% 0.33333333% 1%;
 }
 
-.container .list li a {
+.mk-container .list li a {
     position: relative;
     display: block;
     height: 50px;
@@ -73,7 +73,7 @@ ul, ol {
     background: rgba(255, 255, 255, 0.3);
 }
 
-.container .list li a:hover {
+.mk-container .list li a:hover {
     animation: none;
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
@@ -84,7 +84,7 @@ ul, ol {
     background: rgba(255, 255, 255, 0.5);
 }
 
-.container .list .title {
+.mk-container .list .title {
     font-size: 14px;
     line-height: 20px;
     overflow: hidden;
@@ -94,7 +94,7 @@ ul, ol {
     color: #000fdc;
 }
 
-.container .list .title img {
+.mk-container .list .title img {
     float: left;
     width: auto;
     height: 20px;
@@ -102,7 +102,7 @@ ul, ol {
     margin-left: 8px;
 }
 
-.container .list .desc {
+.mk-container .list .desc {
     line-height: 24px;
     color: #000000;
     overflow: hidden;
@@ -110,52 +110,52 @@ ul, ol {
     white-space: nowrap;
 }
 
-.container .list .desc span {
+.mk-container .list .desc span {
     font-size: 12px;
     margin-left: 8px;
 }
 
 @media (min-width: 768px) {
-    .container .caption {
+    .mk-container .caption {
         padding: 12px 20px 5px;
     }
 
-    .container .list li a {
+    .mk-container .list li a {
         height: 90px;
         padding: 12px;
     }
 
-    .container .list li {
+    .mk-container .list li {
         width: 49%;
         margin: 0.5% 0.33333333% 1%;
     }
 
-    .container .list .title {
+    .mk-container .list .title {
         font-size: 18px;
         line-height: 40px;
         height: 40px;
     }
 
-    .container .list .title img {
+    .mk-container .list .title img {
         height: 30px;
         margin-right: 8px;
         margin-left: 0;
     }
 
-    .container .list .desc span {
+    .mk-container .list .desc span {
         font-size: 14px;
         margin-left: 0;
     }
 }
 
 @media (min-width: 1200px) {
-    .container .list li {
+    .mk-container .list li {
         width: 32%;
         margin: 0.5% 0.66666666% 1%;
     }
 }
 
-/*.container .list .desc span:hover {
+/*.mk-container .list .desc span:hover {
     color: #ff6000;
     display: inline-block;
     padding-left: 100%;  !* 从右至左开始轮播 *!
