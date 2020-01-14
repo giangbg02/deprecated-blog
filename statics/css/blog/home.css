@@ -111,11 +111,7 @@ aside {
 
 main::-webkit-scrollbar {
     height: 0;
-    width: 5px;
-}
-
-main::-webkit-scrollbar-thumb {
-    background-color: orange;
+    width: 0;
 }
 
 main::-webkit-scrollbar-corner {
@@ -129,8 +125,7 @@ main {
     background-color: #f9f9f9;
     height: 100vh;
     overflow: scroll;
-    scrollbar-width: thin;
-    scrollbar-color: orange transparent;
+    scrollbar-width: none;
 }
 
 .article-main {
@@ -139,7 +134,7 @@ main {
 }
 
 .article-aside {
-    padding: 0 5px 0 0;
+    padding: 0;
     width: 25%;
 }
 
@@ -156,6 +151,7 @@ main {
     background-color: #f1f3f4;
     height: auto;
     word-break: break-all;
+    z-index: 1;
 }
 
 @media (max-width: 768px) {
