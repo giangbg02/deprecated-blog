@@ -1,10 +1,5 @@
 .main-body::-webkit-scrollbar {
-    width: 5px;
-    background-color: rgba(255, 255, 255, 0);
-}
-
-.main-body::-webkit-scrollbar-thumb {
-    background-color: orange;
+    width: 0;
 }
 
 .main-body {
@@ -14,14 +9,12 @@
     background-size: cover;
     overflow: scroll;
     overflow-x: hidden;
-    scrollbar-width: thin; /*火狐浏览器滚动条隐藏*/
-    scrollbar-color: orange transparent;
+    scrollbar-width: none;
 }
 
 .container {
-    padding: 50px 0 0 0 !important;
+    padding: 0 !important;
     height: auto;
-    background-color: #dfe6e9;
     box-shadow: 0 0 10px #c3c3c3;
 }
 
@@ -51,13 +44,21 @@
     border-radius: 50%;
 }
 
+.container > aside::-webkit-scrollbar {
+    width: 0;
+}
+
 .container > aside {
     width: 220px;
-    background-color: rgba(255, 255, 255, 0);
+    height: 100vh;
+    background-color: #dfe6e9;
     position: fixed !important;
     z-index: 997;
-    padding: 0 10px;
+    padding: 50px 10px 0;
     transition: all 0.5s;
+    overflow: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
 }
 
 .container aside .personal-info {
@@ -108,11 +109,27 @@
     box-shadow: 0 0 12px #f7b731;
 }
 
+.container > main::-webkit-scrollbar {
+    height: 0;
+    width: 5px;
+}
+
+.container > main::-webkit-scrollbar-thumb {
+    background-color: orange;
+}
+
+.container > main::-webkit-scrollbar-corner {
+    width: 0;
+}
+
 .container > main {
     margin: 0 0 0 220px;
-    padding: 0;
+    padding: 50px 0 0 0;
     background-color: #f9f9f9;
-    height: auto;
+    height: 100vh;
+    overflow: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: orange transparent;
 }
 
 .container main .article-main {
@@ -123,6 +140,9 @@
 
 .container main .article-aside {
     float: left;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
     padding: 0 15px 0 0;
     width: 25%;
 }
@@ -175,5 +195,11 @@
 @media (max-width: 992px) {
     .container header {
         max-width: 750px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container header {
+        max-width: 768px;
     }
 }
