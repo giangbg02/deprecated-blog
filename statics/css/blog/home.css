@@ -111,7 +111,7 @@ aside {
 
 main::-webkit-scrollbar {
     height: 0;
-    width: 9px;
+    width: 5px;
 }
 
 main::-webkit-scrollbar-thumb {
