@@ -1,4 +1,6 @@
 .main-body {
+    margin: 0;
+    padding: 0 10px;
     width: 100%;
     height: 100vh;
     background : url(../../statics/images/bg.jpg) no-repeat center;
@@ -15,6 +17,14 @@
     max-width: 100%;
     box-shadow: 2px 2px 8px #c6fafc;
     background: rgba(255, 255, 255, 0.3);
+}
+
+li {
+    list-style: none;
+}
+
+ul, ol {
+     margin-bottom: 5px;
 }
 
 .icon {
@@ -42,6 +52,7 @@
 }
 
 .container .list {
+    padding: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: left;

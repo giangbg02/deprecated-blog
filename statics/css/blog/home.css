@@ -18,77 +18,76 @@
     scrollbar-color: orange transparent;
 }
 
-main {
+.container {
+    padding: 50px 0 0 0 !important;
     height: auto;
     background-color: #dfe6e9;
     box-shadow: 0 0 10px #c3c3c3;
 }
 
-header {
+.container header {
+    width: 100%;
     height: 50px;
-    background-color: #9980FA;
-    clear: both;
-    z-index: 999;
-}
-
-main header {
-    position: -webkit-sticky;
-    position: sticky;
+    max-width: 1170px;
+    background-color: #0097e6;
+    position: fixed;
     top: 0;
+    z-index: 999;
+    box-shadow: 0 0 10px #c3c3c3;
 }
 
-main header .avatar {
+.container header .avatar {
     display: none;
     float: left;
     height: 50px;
     width: 50px;
     align-items: center;
     justify-content: center;
+    transition: all 1s;
 }
 
-main header .avatar img {
+.container header .avatar img {
     width: 35px;
     border-radius: 50%;
 }
 
-main > aside {
+.container > aside {
+    width: 220px;
     background-color: rgba(255, 255, 255, 0);
-    position: -webkit-sticky !important;
-    position: sticky !important;
-    top: 51px;
+    position: fixed !important;
+    z-index: 997;
+    padding: 0 10px;
+    transition: all 0.5s;
 }
 
-main aside .personal-info {
+.container aside .personal-info {
     margin: 15px 0;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
 }
 
-main aside .personal-info .personal-avatar, main aside .personal-username {
+.container aside .personal-info .personal-avatar, .container aside .personal-username {
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: center;
 }
 
-main aside .personal-info .personal-avatar img {
+.container aside .personal-info .personal-avatar img {
     width: 50%;
     border-radius: 50%;
     transition: all 1s;
 }
 
-main aside .personal-info .personal-avatar img:hover {
+.container aside .personal-info .personal-avatar img:hover, .container header .avatar:hover {
     transform: rotate(360deg);
 }
 
-main aside .personal-username {
+.container aside .personal-username {
     padding: 5px 0;
     font-size: 1.6em;
     font-family: "Segoe Print", serif;
 }
 
-main aside .personal-info .personal-link {
+.container aside .personal-info .personal-link {
     display: flex;
     width: 100%;
     padding: 15px 0;
@@ -96,47 +95,85 @@ main aside .personal-info .personal-link {
     justify-content: space-around;
 }
 
-main aside .personal-info .personal-link a {
+.container aside .personal-info .personal-link a {
     width: 16%;
 }
 
-main aside .personal-info .personal-link a img {
+.container aside .personal-info .personal-link a img {
     width: 100%;
 }
 
-main aside .personal-info .personal-link a img:hover {
+.container aside .personal-info .personal-link a img:hover {
     background-color: rgba(247, 183, 49, 0.31);
     box-shadow: 0 0 12px #f7b731;
 }
 
-main > section {
-    margin: 0;
-    padding: 15px 0 !important;
+.container > main {
+    margin: 0 0 0 220px;
+    padding: 0;
     background-color: #f9f9f9;
-    height: 900px;
+    height: auto;
 }
 
-main section div .post {
-    margin: 0;
+.container main .article-main {
+    float: left;
+    padding: 0 15px;
+    width: 75%;
+}
+
+.container main .article-aside {
+    float: left;
+    padding: 0 15px 0 0;
+    width: 25%;
+}
+
+.container main .article-main .article-list, .container main .article-aside .article-catalog {
+    margin: 15px 0;
     padding: 15px;
     background-color: #f1f3f4;
     width: 100%;
+    height: 160px;
 }
 
-main section div aside {
-    margin: 0;
-    padding: 15px !important;
-    background-color: #f1f3f4;
-    width: 100%;
+@media (max-width: 768px) {
+    .container main .article-main {
+        width: 100%;
+    }
+
+    .container main .article-aside {
+        display: none;
+    }
+
+}
+
+.show {
+    left: 0 !important;
+    background-color: #dfe6e9 !important;
+    box-shadow: 0 0 5px #8D8D8D;
 }
 
 @media (max-width: 992px) {
-    .mk-hide {
-        display: none !important;
+    .container > aside {
+        left: -220px;
     }
 
-    main header .avatar {
+    .container > main {
+        margin: 0;
+    }
+
+    .container header .avatar {
         display: flex;
     }
+}
 
+@media (max-width: 1200px) {
+    .container header {
+        max-width: 970px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container header {
+        max-width: 750px;
+    }
 }
