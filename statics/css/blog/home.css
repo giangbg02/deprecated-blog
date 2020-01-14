@@ -18,7 +18,7 @@
     box-shadow: 0 0 10px #c3c3c3;
 }
 
-.container header {
+header {
     width: 100%;
     height: 50px;
     max-width: 1170px;
@@ -29,7 +29,7 @@
     box-shadow: 0 0 10px #c3c3c3;
 }
 
-.container header .avatar {
+.avatar {
     display: none;
     float: left;
     height: 50px;
@@ -39,56 +39,56 @@
     transition: all 1s;
 }
 
-.container header .avatar img {
+.avatar img {
     width: 35px;
     border-radius: 50%;
 }
 
-.container > aside::-webkit-scrollbar {
+aside::-webkit-scrollbar {
     width: 0;
 }
 
-.container > aside {
+aside {
     width: 220px;
     height: 100vh;
     background-color: #dfe6e9;
     position: fixed !important;
     z-index: 997;
     padding: 50px 10px 0;
-    transition: all 0.5s;
+    transition: all 1s;
     overflow: scroll;
     overflow-x: hidden;
     scrollbar-width: none;
 }
 
-.container aside .personal-info {
+.personal-info {
     margin: 15px 0;
 }
 
-.container aside .personal-info .personal-avatar, .container aside .personal-username {
+.personal-avatar, .personal-username {
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: center;
 }
 
-.container aside .personal-info .personal-avatar img {
+.personal-avatar img {
     width: 50%;
     border-radius: 50%;
     transition: all 1s;
 }
 
-.container aside .personal-info .personal-avatar img:hover, .container header .avatar:hover {
+.personal-avatar img:hover, .avatar:hover {
     transform: rotate(360deg);
 }
 
-.container aside .personal-username {
+.personal-username {
     padding: 5px 0;
     font-size: 1.6em;
     font-family: "Segoe Print", serif;
 }
 
-.container aside .personal-info .personal-link {
+.personal-link {
     display: flex;
     width: 100%;
     padding: 15px 0;
@@ -96,33 +96,34 @@
     justify-content: space-around;
 }
 
-.container aside .personal-info .personal-link a {
+.personal-link a {
     width: 16%;
 }
 
-.container aside .personal-info .personal-link a img {
+.personal-link a img {
     width: 100%;
 }
 
-.container aside .personal-info .personal-link a img:hover {
+.personal-link a img:hover {
     background-color: rgba(247, 183, 49, 0.31);
     box-shadow: 0 0 12px #f7b731;
 }
 
-.container > main::-webkit-scrollbar {
+main::-webkit-scrollbar {
     height: 0;
-    width: 5px;
+    width: 9px;
 }
 
-.container > main::-webkit-scrollbar-thumb {
+main::-webkit-scrollbar-thumb {
     background-color: orange;
 }
 
-.container > main::-webkit-scrollbar-corner {
+main::-webkit-scrollbar-corner {
     width: 0;
 }
 
-.container > main {
+main {
+    display: flex;
     margin: 0 0 0 220px;
     padding: 50px 0 0 0;
     background-color: #f9f9f9;
@@ -132,74 +133,74 @@
     scrollbar-color: orange transparent;
 }
 
-.container main .article-main {
-    float: left;
+.article-main {
     padding: 0 15px;
     width: 75%;
 }
 
-.container main .article-aside {
-    float: left;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    padding: 0 15px 0 0;
+.article-aside {
+    padding: 0 5px 0 0;
     width: 25%;
 }
 
-.container main .article-main .article-list, .container main .article-aside .article-catalog {
+.article-list{
     margin: 15px 0;
     padding: 15px;
-    background-color: #f1f3f4;
-    width: 100%;
+    background-color: #edeff0;
     height: 160px;
 }
 
+.article-catalog {
+    margin: 15px 0;
+    padding: 15px;
+    background-color: #f1f3f4;
+    height: auto;
+    word-break: break-all;
+}
+
 @media (max-width: 768px) {
-    .container main .article-main {
+    .article-main {
         width: 100%;
     }
 
-    .container main .article-aside {
+    .article-aside {
         display: none;
     }
 
 }
 
-.show {
-    left: 0 !important;
-    background-color: #dfe6e9 !important;
-    box-shadow: 0 0 5px #8D8D8D;
-}
-
 @media (max-width: 992px) {
-    .container > aside {
-        left: -220px;
+    aside {
+        display: none;
     }
 
-    .container > main {
+    main {
         margin: 0;
     }
 
-    .container header .avatar {
+    .avatar {
         display: flex;
     }
 }
 
 @media (max-width: 1200px) {
-    .container header {
+    header {
         max-width: 970px;
     }
 }
 
 @media (max-width: 992px) {
-    .container header {
+    header {
         max-width: 750px;
     }
 }
 
 @media (max-width: 768px) {
-    .container header {
+    header {
         max-width: 768px;
     }
+}
+
+.fixed {
+    position: fixed;
 }
