@@ -3,7 +3,7 @@ document.querySelector("#show-aside-btn").addEventListener("click", function () 
     document.querySelector(".container>aside").classList.toggle("show");
 });
 
-// 目录粘性定位
+// 右侧文章目录粘性定位
 $(".main-body").onresize = function(){
     $(function () {
         var getWidth = document.querySelector(".article-aside").offsetWidth;
