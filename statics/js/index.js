@@ -4,7 +4,7 @@ document.querySelector("#show-aside-btn").addEventListener("click", function () 
 });
 
 // 目录粘性定位
-$(function () {
+$(".main-body").onresize = function(){
     $(function () {
         var getWidth = document.querySelector(".article-aside").offsetWidth;
         var offset = $('#aside').offset();
@@ -18,4 +18,4 @@ $(function () {
             }
         });
     });
-});
+};
