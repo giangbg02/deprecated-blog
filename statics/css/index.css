@@ -1,3 +1,4 @@
+/*主页面承载*/
 .main-body::-webkit-scrollbar {
     width: 0;
 }
@@ -19,6 +20,7 @@
     background: #ffffff00;
 }
 
+/*页首*/
 header {
     width: 100%;
     height: 50px;
@@ -47,6 +49,21 @@ header {
     border-radius: 50%;
 }
 
+.list-btn {
+    float: right;
+    display: none;
+    width: 50px;
+    height: 50px;
+}
+
+.list-btn-top, .list-btn-mid, .list-btn-btm {
+    margin: 2px;
+    height: 4px;
+    width: 22px;
+    background-color: #4c5465;
+}
+
+/*左侧边*/
 aside::-webkit-scrollbar {
     width: 0;
 }
@@ -139,6 +156,45 @@ img {
     box-shadow: 0 0 12px #00f7ee;
 }
 
+.left-nav {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    background-color: rgba(235, 235, 235, 0.5);
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.left-nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+.left-nav li {
+    list-style: none;
+}
+
+.left-nav li:hover {
+    border-radius: 3px;
+    background-color: rgba(241, 241, 241, 0.3);
+    box-shadow: 0 0 4px rgba(241, 241, 241, 0.3);
+}
+
+.left-nav li a {
+    display: flex;
+    height: 30px;
+    align-items: center;
+    text-decoration: none;
+    color: #535c68;
+}
+
+.left-nav li a svg {
+    display: inline;
+    margin-left: 5px;
+    margin-right: 15px;
+}
+
+/*主体内容区*/
 main::-webkit-scrollbar {
     height: 0;
     width: 0;
@@ -192,6 +248,12 @@ main {
     word-break: break-all;
 }
 
+/*固定定位*/
+.fixed {
+    position: fixed;
+}
+
+/*响应式布局*/
 @media (max-width: 1200px) {
     header {
         max-width: 970px;
@@ -243,22 +305,4 @@ main {
         align-items: center;
         justify-content: center;
     }
-}
-
-.fixed {
-    position: fixed;
-}
-
-.list-btn {
-    float: right;
-    display: none;
-    width: 50px;
-    height: 50px;
-}
-
-.list-btn-top, .list-btn-mid, .list-btn-btm {
-    margin: 2px;
-    height: 4px;
-    width: 22px;
-    background-color: #4c5465;
 }
