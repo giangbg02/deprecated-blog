@@ -57,8 +57,8 @@ header {
 }
 
 .nav-index a img {
-    height: 32px;
-    width: 32px;
+    height: 24px;
+    width: 24px;
 }
 
 aside::-webkit-scrollbar {
@@ -197,7 +197,9 @@ main {
 }
 
 .article-catalog {
-    margin: 15px 0;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.45);
+    margin: 15px 15px 0 0;
     padding: 15px;
     height: auto;
     word-break: break-all;
