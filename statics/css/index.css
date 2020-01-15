@@ -202,12 +202,19 @@ main {
     margin: 15px 15px 0 0;
     padding: 15px;
     height: auto;
+    width: 173px;
     word-break: break-all;
 }
 
 @media (max-width: 1200px) {
     header {
         max-width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .article-catalog {
+        width: 223px;
     }
 }
 
