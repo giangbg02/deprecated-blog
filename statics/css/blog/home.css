@@ -5,7 +5,7 @@
 .main-body {
     width: 100%;
     height: 100vh;
-    background: #efefef;
+    background: url("../../images/bg1.jpg");
     background-size: cover;
     overflow: scroll;
     overflow-x: hidden;
@@ -16,13 +16,14 @@
     padding: 0 !important;
     height: auto;
     box-shadow: 0 0 10px #c3c3c3;
+    background: #ffffff00;
 }
 
 header {
     width: 100%;
     height: 50px;
     max-width: 1170px;
-    background-color: #0097e6;
+    background-color: rgba(139, 141, 255, 0.95);
     position: fixed;
     top: 0;
     z-index: 999;
@@ -40,6 +41,7 @@ header {
 }
 
 .avatar img {
+    height: 35px;
     width: 35px;
     border-radius: 50%;
 }
@@ -51,7 +53,7 @@ aside::-webkit-scrollbar {
 aside {
     width: 220px;
     height: 100vh;
-    background-color: #dfe6e9;
+    background-color: rgba(223, 228, 234, 0.7);
     position: fixed !important;
     z-index: 997;
     padding: 50px 10px 0;
@@ -72,13 +74,41 @@ aside {
     justify-content: center;
 }
 
-.personal-avatar img {
-    width: 50%;
+.avatar-img {
+    position: relative;
+    padding: 4px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid white;
     border-radius: 50%;
     transition: all 1s;
 }
 
-.personal-avatar img:hover, .avatar:hover {
+img {
+    height: 100%;
+    width: 100%;
+}
+
+.avatar-img:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 1px solid white;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    animation: wave 1.5s infinite linear;
+}
+
+@keyframes wave {
+    to {
+        transform: scale(1.3);
+        opacity: 0;
+    }
+}
+
+.avatar-img:hover, .avatar:hover {
     transform: rotate(360deg);
 }
 
@@ -100,12 +130,8 @@ aside {
     width: 16%;
 }
 
-.personal-link a img {
-    width: 100%;
-}
-
 .personal-link a img:hover {
-    background-color: rgba(247, 183, 49, 0.31);
+    background-color: rgba(247, 183, 49, 0.3);
     box-shadow: 0 0 12px #f7b731;
 }
 
@@ -122,7 +148,7 @@ main {
     display: flex;
     margin: 0 0 0 220px;
     padding: 50px 0 0 0;
-    background-color: #f9f9f9;
+    background-color: rgba(237, 239, 240, 0.7);
     height: 100vh;
     overflow: scroll;
     scrollbar-width: none;
@@ -138,31 +164,31 @@ main {
     width: 25%;
 }
 
-.article-list{
+.article-list {
     margin: 15px 0;
     padding: 15px;
-    background-color: #edeff0;
+    background-color: rgba(255, 255, 255, 0.5);
     height: 160px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px rgba(216, 216, 216, 0.5);
+}
+
+.article-list:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 3px 3px rgba(0, 206, 204, 0.5);
 }
 
 .article-catalog {
     margin: 15px 0;
     padding: 15px;
-    background-color: #f1f3f4;
     height: auto;
     word-break: break-all;
-    z-index: 1;
 }
 
-@media (max-width: 768px) {
-    .article-main {
-        width: 100%;
+@media (max-width: 1200px) {
+    header {
+        max-width: 970px;
     }
-
-    .article-aside {
-        display: none;
-    }
-
 }
 
 @media (max-width: 992px) {
@@ -177,26 +203,47 @@ main {
     .avatar {
         display: flex;
     }
-}
 
-@media (max-width: 1200px) {
-    header {
-        max-width: 970px;
-    }
-}
-
-@media (max-width: 992px) {
     header {
         max-width: 750px;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+    .article-main {
+        width: 100%;
+    }
+
+    .article-aside {
+        display: none;
+    }
+
     header {
         max-width: 768px;
+    }
+
+    .list-btn {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }
 
 .fixed {
     position: fixed;
+}
+
+.list-btn {
+    float: right;
+    display: none;
+    width: 50px;
+    height: 50px;
+}
+
+.list-btn-top, .list-btn-mid, .list-btn-btm {
+    margin: 2px;
+    height: 4px;
+    width: 22px;
+    background-color: #4c5465;
 }
