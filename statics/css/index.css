@@ -47,20 +47,6 @@ header {
     border-radius: 50%;
 }
 
-.nav-index {
-    float: right;
-    height: 50px;
-    width: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.nav-index a img {
-    height: 24px;
-    width: 24px;
-}
-
 aside::-webkit-scrollbar {
     width: 0;
 }
