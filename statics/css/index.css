@@ -212,6 +212,10 @@ img {
     font-size: smaller;
 }
 
+.num {
+    color: rgba(255, 102, 0, 0.75);
+}
+
 /*主体内容区*/
 main::-webkit-scrollbar {
     height: 0;
