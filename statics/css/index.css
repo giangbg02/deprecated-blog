@@ -1,6 +1,7 @@
 /*主页面承载*/
 .main-body::-webkit-scrollbar {
     width: 0;
+    height: 0;
 }
 
 .main-body {
@@ -45,21 +46,39 @@ header {
 .avatar img {
     height: 35px;
     width: 35px;
-    background-color: rgba(214,214,214,0.5);
+    background-color: rgba(214, 214, 214, 0.5);
     border-radius: 50%;
 }
 
-.list-btn {
-    float: right;
-    display: none;
-    width: 50px;
+.header-btn-left, .header-btn-right {
+    width: auto;
     height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.header-btn-left {
+    justify-content: left;
+}
+
+.header-btn-left a {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.header-btn-right {
+    justify-content: right;
+}
+
+.list-btn {
+    display: none;
 }
 
 .list-btn-top, .list-btn-mid, .list-btn-btm {
-    margin: 2px;
+    margin: 4px 10px;
+    width: 25px;
     height: 4px;
-    width: 22px;
     background-color: #4c5465;
 }
 
@@ -74,7 +93,7 @@ aside {
     background-color: rgba(240, 240, 240, 0.7);
     position: fixed !important;
     z-index: 997;
-    padding: 50px 10px 0;
+    padding: 50px 10px;
     transition: all 1s;
     overflow: scroll;
     overflow-x: hidden;
@@ -206,6 +225,10 @@ img {
     margin-right: 15px;
 }
 
+.selected span {
+    color: #ff0069;
+}
+
 .count {
     padding: 10px 15px;
     color: #5d5d5d;
@@ -241,24 +264,34 @@ main {
     width: 75%;
 }
 
+.article-aside::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
 .article-aside {
     padding: 0;
     width: 25%;
+    scrollbar-width: none;
 }
 
 .article-list {
     margin: 15px 0;
     padding: 15px;
     background-color: rgba(255, 255, 255, 0.45);
-    height: 160px;
+    height: auto;
     font-weight: bolder;
     border-radius: 10px;
     box-shadow: 0 0 16px rgba(216, 216, 216, 0.5);
 }
 
-.article-list:hover {
+.pointer:hover {
     transform: translateY(-3px);
     box-shadow: 0 3px 16px rgba(0, 206, 204, 0.5);
+}
+
+.article-img {
+    width: 25%;
 }
 
 .article-catalog {
@@ -269,11 +302,16 @@ main {
     height: auto;
     width: 173px;
     word-break: break-all;
+    transition: 0.5s ease-in-out;
 }
 
 /*固定定位*/
 .fixed {
     position: fixed;
+}
+
+figcaption {
+    text-align: center;
 }
 
 /*响应式布局*/
@@ -291,9 +329,28 @@ main {
 
 @media (max-width: 992px) {
     aside {
-        display: none;
+        width: 0;
+        padding: 0;
         background: #d6d7db;
         box-shadow: 0 0 10px #222f3e;
+        transition: 0.8s ease-in-out;
+    }
+
+    aside.active {
+        width: 220px;
+        padding: 50px 10px;
+        transition: 0.8s ease-in-out;
+    }
+
+    aside div, aside nav {
+        position: relative;
+        left: -220px;
+        transition: 0.5s ease-in-out;
+    }
+
+    aside.active div, aside.active nav {
+        left: 0;
+        transition: 1s ease-in-out;
     }
 
     main {
@@ -314,18 +371,64 @@ main {
         width: 100%;
     }
 
-    .article-aside {
-        display: none;
-    }
-
     header {
         max-width: 768px;
     }
 
     .list-btn {
-        display: flex !important;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        display: block;
+    }
+
+    .list-btn div {
+        transition: 0.3s ease-in-out;
+    }
+
+    .list-btn.active div {
+        transition: 0.3s ease-in-out;
+    }
+
+    .list-btn.active .list-btn-top {
+        transform: rotate(45deg) translate(5px, 6px);
+    }
+
+    .list-btn.active .list-btn-mid {
+        opacity: 0;
+    }
+
+    .list-btn.active .list-btn-btm {
+        transform: rotate(-45deg) translate(5px, -6px);
+    }
+
+    .article-aside {
+        position: fixed;
+        right: 0;
+        width: 220px;
+        height: 0;
+        transition: 0.5s ease-in-out;
+    }
+
+    .article-catalog {
+        position: relative;
+        display: none;
+        margin: 0;
+        width: 100%;
+        height: 0;
+    }
+
+    .article-aside.active {
+        height: 100vh;
+        padding: 15px;
+        overflow: scroll;
+        background-color: rgba(139, 141, 255, 0.95);
+        transition: height 1s ease-in-out;
+    }
+
+    .article-catalog.active {
+        display: block;
+        opacity: 1;
+        margin: 0;
+        width: 100%;
+        height: auto;
+        transition: height 1s ease-in-out;
     }
 }

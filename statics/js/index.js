@@ -1,6 +1,13 @@
-// 手机点击头像弹出侧边栏
+// 点击头像弹出侧边栏
 document.querySelector("#show-aside-btn").addEventListener("click", function () {
-    document.querySelector(".container>aside").classList.toggle("show");
+    document.querySelector(".container>aside").classList.toggle("active");
+});
+
+// 弹出侧边目录
+document.querySelector(".list-btn").addEventListener("click", function () {
+    document.querySelector(".list-btn").classList.toggle("active");
+    document.querySelector(".article-aside").classList.toggle("active");
+    document.querySelector(".article-catalog").classList.toggle("active");
 });
 
 // 右侧文章目录粘性定位
@@ -16,3 +23,4 @@ $(function () {
         }
     });
 });
+
