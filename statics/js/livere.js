@@ -1,3 +1,4 @@
+// 来必力评论
 (function (d, s) {
     var j, e = d.getElementsByTagName(s)[0];
 
