@@ -17,11 +17,16 @@ svg {
 
 .books {
     display: flex;
-    padding: 15px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 .book {
-    margin: 0 10px;
+    margin: 10px;
     width: 90px;
     height: 120px;
     background-color: rgba(255, 255, 255, 0.8);
@@ -33,15 +38,15 @@ svg {
 }
 
 .book:after {
+    position: relative;
     content: "";
     width: 3px;
-    display: inline-block;
+    height: 100%;
+    float: right;
+    right: -5px;
+    top: -120px;
     background-color: rgba(255, 255, 255, 0.8);
     background-size: 100% 100%;
-    position: relative;
-    right: -92px;
-    height: 100%;
-    top: -120px;
 }
 
 .book-img, .book-text {
