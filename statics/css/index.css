@@ -157,7 +157,7 @@ img {
     font-size: 1.6em;
     font-weight: 600;
     color: rgba(0, 0, 0, 0.6);
-    font-family: "Segoe Print", serif;
+    font-family: "Segoe Print", sans-serif;
 }
 
 .personal-motto {
@@ -290,10 +290,6 @@ main {
     box-shadow: 0 3px 16px rgba(0, 206, 204, 0.5);
 }
 
-.article-img {
-    width: 25%;
-}
-
 .article-catalog {
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.45);
@@ -303,34 +299,6 @@ main {
     width: 173px;
     word-break: break-all;
     transition: 0.5s ease-in-out;
-}
-
-/*友链*/
-.friend-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.friend-links a {
-    height: 80px;
-    width: 48%;
-    min-width: 150px;
-    display: inline-block;
-    margin-bottom: 15px;
-    padding: 15px;
-    border: 1px solid rgba(126, 120, 122, 0.5);
-    border-radius: 15px;
-    color: #ac2925;
-    text-decoration: none;
-    background-color: rgba(255, 255, 255, 0.5);
-}
-
-.friend-links a img {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
 }
 
 /*固定定位*/
@@ -459,4 +427,11 @@ figcaption {
         height: auto;
         transition: height 1s ease-in-out;
     }
+}
+
+/*来必力*/
+#lv-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px;
 }
