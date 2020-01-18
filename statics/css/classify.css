@@ -10,15 +10,14 @@ hr {
     color: #636e72;
 }
 
-svg {
+.article-list-header svg {
     position: relative;
     top: 5px;
 }
 
 .books {
     display: flex;
-    padding: 0;
-    margin: 0;
+    padding: 5px 0 0;
     width: 100%;
     height: auto;
     flex-wrap: wrap;
@@ -26,7 +25,7 @@ svg {
 }
 
 .book {
-    margin: 10px;
+    margin: 0 10px 10px;
     width: 90px;
     height: 120px;
     background-color: rgba(255, 255, 255, 0.8);
@@ -45,7 +44,7 @@ svg {
     float: right;
     right: -5px;
     top: -120px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     background-size: 100% 100%;
 }
 
@@ -58,6 +57,11 @@ svg {
 .book-img {
     width: 100%;
     height: 60%;
+}
+
+.book-img svg, .book-img img {
+    position: relative;
+    top: 7px;
 }
 
 .book-img img {
