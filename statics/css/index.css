@@ -71,6 +71,33 @@ header {
     justify-content: right;
 }
 
+.search-input {
+    margin: 0 10px;
+    padding: 0 5px;
+    background-color: #ffffff;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 24px;
+}
+
+.search-input:hover > .search-text {
+    width: 120px;
+    padding: 0 5px;
+}
+
+.search-text {
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    color: #1b6d85;
+    font-size: 12px;
+    transition: 0.8s ease-in-out;
+    width: 0;
+}
+
 .list-btn {
     display: none;
 }
@@ -458,6 +485,7 @@ figcaption {
     overflow: hidden;
 }
 
+/*音乐播放器*/
 .music {
     position: fixed;
     bottom: 60px;
