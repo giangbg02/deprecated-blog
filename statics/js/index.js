@@ -6,13 +6,12 @@ $(function () {
         fragment: '.main-body',
         timeout: 5000,
         cache: false
-    }).on('pjax:complete',
-        function() {
-            GenerateContentList();
-            if ($('.ds-thread').length > 0) { if (typeof DUOSHUO !== 'undefined') DUOSHUO.EmbedThread('.ds-thread'); else $.getScript("https://www.ihewro.com/duoshuo/embedhw4.min.js"); }
-        });
-
-
+    }).on('pjax:complete', function () {
+        GenerateContentList();
+        if ($('.ds-thread').length > 0) {
+            if (typeof DUOSHUO !== 'undefined') DUOSHUO.EmbedThread('.ds-thread'); else $.getScript("https://www.ihewro.com/duoshuo/embedhw4.min.js");
+        }
+    });
 });
 
 function GenerateContentList() {
@@ -40,8 +39,8 @@ function GenerateContentList() {
     });
 
     let targetUrl = window.location.href;
-    $.ajax('https://hitcounter.pythonanywhere.com/count',{
-        data:{url: targetUrl},
+    $.ajax('https://hitcounter.pythonanywhere.com/count', {
+        data: {url: targetUrl},
     }).then(count => $(".num").html(count));
 
     // 来必力评论

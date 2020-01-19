@@ -19,11 +19,13 @@
 
 .theme1 .article-hr {
     margin: 5px 0;
+    border-top-color: rgba(255, 255, 255, 0.75);
 }
 
 .theme1 .article-title {
-    margin-top: 10px;
+    margin: 10px 0 6px;
     font-size: large;
+    font-weight: normal;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -33,6 +35,7 @@
     color: #787878;
     margin-top: 10px;
     font-size: smaller;
+    font-weight: normal;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -42,5 +45,4 @@
     font-size: small;
     display: flex;
     justify-content: space-around;
-    margin-bottom: 5px;
 }
