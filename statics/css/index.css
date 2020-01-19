@@ -178,7 +178,12 @@ img {
     width: 16%;
 }
 
-.personal-link a img:hover {
+.personal-link a svg {
+    width: 32px;
+    height: 32px;
+}
+
+.personal-link a svg:hover {
     background-color: rgba(0, 247, 238, 0.3);
     box-shadow: 0 0 12px #00f7ee;
 }
@@ -292,11 +297,16 @@ main {
     box-shadow: 0 3px 16px rgba(0, 206, 204, 0.5);
 }
 
+.article-aside-fixed {
+    margin: 0;
+    padding: 0;
+}
+
 .article-catalog {
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.45);
     margin: 15px 15px 0 0;
     padding: 15px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.45);
     height: auto;
     width: 173px;
     word-break: break-all;
@@ -437,4 +447,20 @@ figcaption {
     margin-bottom: 10px;
     background-color: white;
     border-radius: 10px;
+}
+
+/*iconfont*/
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+.music {
+    position: fixed;
+    bottom: 60px;
+    left: 0;
+    z-index: 10003;
 }

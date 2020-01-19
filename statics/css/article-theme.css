@@ -4,8 +4,17 @@
     width: 100%;
 }
 
-.article-description:hover {
+.theme1 .article-description:hover {
     text-decoration: none;
+}
+
+.theme1 .article-img {
+    margin: 10px 5px 0;
+}
+
+.theme1 .article-img svg {
+    width: 48px;
+    height: 48px;
 }
 
 .theme1 .article-hr {

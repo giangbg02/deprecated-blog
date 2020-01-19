@@ -13,6 +13,8 @@ hr {
 .article-list-header svg {
     position: relative;
     top: 5px;
+    width: 36px;
+    height: 36px;
 }
 
 .books {
@@ -62,9 +64,6 @@ hr {
 .book-img svg, .book-img img {
     position: relative;
     top: 7px;
-}
-
-.book-img img {
     width: 48px;
     height: 48px;
 }
