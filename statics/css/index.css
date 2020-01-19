@@ -319,9 +319,15 @@ main {
 }
 
 .article-main {
-    padding: 0 15px 50px;
+    padding: 0 15px;
     width: 75%;
-    margin: auto;
+    height: auto;
+}
+
+.article-main:after {
+    display: block;
+    content: '';
+    margin-bottom: 50px;
 }
 
 .article-aside::-webkit-scrollbar {
