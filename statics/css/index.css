@@ -327,6 +327,7 @@ main {
 .article-main:after {
     display: block;
     content: '';
+    padding-bottom: 10px;
     margin-bottom: 50px;
 }
 
