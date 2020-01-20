@@ -1,4 +1,3 @@
-// 右侧文章目录粘性定位
 $(function () {
     GenerateContentList();
 
@@ -8,9 +7,6 @@ $(function () {
         cache: false
     }).on('pjax:complete', function () {
         GenerateContentList();
-        if ($('.ds-thread').length > 0) {
-            if (typeof DUOSHUO !== 'undefined') DUOSHUO.EmbedThread('.ds-thread'); else $.getScript("https://www.ihewro.com/duoshuo/embedhw4.min.js");
-        }
     });
 });
 
@@ -27,6 +23,7 @@ function GenerateContentList() {
         document.querySelector(".article-catalog").classList.toggle("active");
     });
 
+    // 右侧文章目录粘性定位
     var offset = $('#aside').offset();
     $("main").scroll(function () {
         //检查对象的顶部是否在游览器可见的范围内
