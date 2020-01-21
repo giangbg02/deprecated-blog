@@ -6,6 +6,7 @@ const ap = new APlayer({
     mutex: true,
     order: 'random',
     listFolded: false,
+    theme: '#e9e9e9',
     audio: [
         {
             name: 'Bleeder',
@@ -30,17 +31,4 @@ const ap = new APlayer({
             theme: '#2d2d2d'
         }
     ]
-});
-
-const colorThief = new ColorThief();
-const setTheme = (index) => {
-    if (!ap.list.audios[index].theme) {
-        colorThief.getColorAsync(ap.list.audios[index].cover, function (color) {
-            ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);
-        });
-    }
-};
-setTheme(ap.list.index);
-ap.on('listswitch', (index) => {
-    setTheme(index);
 });
