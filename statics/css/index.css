@@ -521,9 +521,6 @@ figcaption {
 }
 
 /*音乐播放器*/
-.music {
-    position: fixed;
-    bottom: -6px;
-    left: -6px;
+#aplayer {
     z-index: 10003;
 }
