@@ -327,7 +327,7 @@ main {
 .article-main:after {
     display: block;
     content: '';
-    padding-bottom: 50px;
+    padding-bottom: 15px;
     margin-bottom: 50px;
 }
 
@@ -522,5 +522,13 @@ figcaption {
 
 /*音乐播放器*/
 #aplayer {
-    z-index: 10003;
+    z-index: 10086;
+}
+
+.aplayer .aplayer-lrc p {
+    color: #f39c12 !important;
+}
+
+.aplayer.aplayer-fixed .aplayer-lrc {
+    text-shadow: -1px -1px 0 #bfd989 !important;
 }
