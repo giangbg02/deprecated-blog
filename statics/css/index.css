@@ -526,9 +526,23 @@ figcaption {
 }
 
 .aplayer .aplayer-lrc p {
-    color: #f39c12 !important;
+    color: #e74c3c !important;
 }
 
 .aplayer.aplayer-fixed .aplayer-lrc {
     text-shadow: -1px -1px 0 #bfd989 !important;
+}
+
+.aplayer .aplayer-list ol::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+}
+
+.aplayer .aplayer-list ol::-webkit-scrollbar-thumb {
+    background-color: #C4E538 !important;
+}
+
+.aplayer .aplayer-list ol {
+    scrollbar-width: thin;
+    scrollbar-color: #C4E538 transparent;
 }

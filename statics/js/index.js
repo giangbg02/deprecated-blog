@@ -41,17 +41,26 @@ function GenerateContentList() {
     }).then(count => $(".num").html(count));
 
     // 来必力评论
-    (function (d, s) {
-        var j, e = d.getElementsByTagName(s)[0];
+    if ($('#lv-container').length > 0) {
+        (function (d, s) {
+            var j, e = d.getElementsByTagName(s)[0];
 
-        if (typeof LivereTower === 'function') {
-            return;
-        }
+            if (typeof LivereTower === 'function') {
+                return;
+            }
 
-        j = d.createElement(s);
-        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-        j.async = true;
+            j = d.createElement(s);
+            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+            j.async = true;
 
-        e.parentNode.insertBefore(j, e);
-    })(document, 'script');
+            e.parentNode.insertBefore(j, e);
+        })(document, 'script');
+        console.log('检测到该页面拥有来必力评论容器，评论系统添加中...')
+    } else {
+        console.log('此页面没有来必力评论容器!')
+    }
+
+    $('.article-tip').click(function () {
+        top.layer.msg('文章正在努力编写中...', {icon: 4})
+    })
 }
