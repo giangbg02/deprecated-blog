@@ -61,6 +61,12 @@ function GenerateContentList() {
     }
 
     $('.article-tip').click(function () {
-        top.layer.msg('文章正在努力编写中...', {icon: 4})
+        top.layer.msg(
+            '<svg style="width: 36px;height: 36px" class="icon" aria-hidden="true"><use xlink:href="#icon-biji"></use></svg>文章正在努力编写中...',
+            {
+                skin: 'layer-skin',
+                time: 10000,
+                btn: ['明白了']
+            })
     })
 }
