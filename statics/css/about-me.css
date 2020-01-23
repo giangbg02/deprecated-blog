@@ -5,3 +5,7 @@
 .article-img {
     width: 25%;
 }
+
+.article-img > figure > img {
+    width: 100%;
+}
