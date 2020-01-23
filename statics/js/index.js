@@ -40,26 +40,6 @@ function GenerateContentList() {
         data: {url: targetUrl},
     }).then(count => $(".num").html(count));
 
-    // 来必力评论
-    if ($('#lv-container').length > 0) {
-        (function (d, s) {
-            var j, e = d.getElementsByTagName(s)[0];
-
-            if (typeof LivereTower === 'function') {
-                return;
-            }
-
-            j = d.createElement(s);
-            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-            j.async = true;
-
-            e.parentNode.insertBefore(j, e);
-        })(document, 'script');
-        console.log('检测到该页面拥有来必力评论容器，评论系统添加中...')
-    } else {
-        console.log('此页面没有来必力评论容器!')
-    }
-
     $('.article-tip').click(function () {
         top.layer.msg(
             '<svg style="width: 36px;height: 36px" class="icon" aria-hidden="true"><use xlink:href="#icon-biji"></use></svg>文章正在努力编写中...',
@@ -68,5 +48,20 @@ function GenerateContentList() {
                 time: 10000,
                 btn: ['明白了']
             })
-    })
+    });
+
+    if ($('#gitalk-container').length > 0) {
+        var gitalk = new Gitalk({
+            clientID: '7ff38d8c3509efdcee12',   // GitHub Application Client ID
+            clientSecret: '01c5373a8f0d16232103c1a3fa78cf1700aba622', // GitHub Application Client Secret
+            repo: 'T-miracle.github.io',       // 存放评论的仓库
+            owner: 'T-miracle',                // 仓库的创建者，
+            admin: ['T-miracle'],              // 如果仓库有多个人可以操作，那么在这里以数组形式写出
+            id: md5(location.pathname),         // 用于标记评论是哪个页面的，确保唯一，并且长度小于50
+        });
+        gitalk.render('gitalk-container');      // 渲染Gitalk评论组件
+    } else {
+        console.log('没有gitalk')
+    }
+
 }

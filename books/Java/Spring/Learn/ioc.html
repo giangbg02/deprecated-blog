@@ -11,11 +11,15 @@
         <link rel="stylesheet" type="text/css" href="../../../../statics/css/index.css">
         <link rel="stylesheet" href="../../../../statics/css/APlayer.min.css">
         <script type="text/javascript" src="../../../../statics/js/jquery-3.4.1.min.js"></script>
-        <script type="text/javascript" src="../../../../statics/js/jquery.pjax.js"></script>
+        <script type="text/javascript" src="../../../../statics/js/jquery.pjax.js"></script><link rel="stylesheet" href="https://cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css">
+        <script src="https://cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
+        <script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
         <script type="text/javascript" src="//at.alicdn.com/t/font_1618477_1g7ditm4cwh.js"></script>
     </head>
     <body>
         <div class="main-body">
+            <link rel="stylesheet" href="../../../../statics/prism/prism.css">
+            <link rel="stylesheet" href="../../../../statics/css/article.css">
             <div class="container">
                 <header>
                     <div class="pull-left header-btn-left">
@@ -138,35 +142,51 @@
                                 <p>AOP、声明式事务等功能是建立在IoC的基础上的。</p>
                                 <h2><a id="ioc的概念与作用">IoC的概念与作用</a></h2>
                                 <p>我们先用图来理解一下，没有使用IoC时类和对象的关系：</p>
-                                <p><img src="http://www.plantuml.com/plantuml/svg/ROmn2i9044Nhp2aMhBVGz49s2yzWkMGd8eaxOJOIH6oyYIS8gKGyZvfZQ10K1ylt-E_7SXrgnswZyih5gFQG69UNAwPjy9OgOZKfYWAIZ9dQjs3qhnMnH_wA0yJFLMoGaPfTZLQUBR6gg5qmOW0OklEzFohjgGrwhh97VvNE_75sT32kbTRgrbs6_ZGLF1ES0XWH614O6LWHM17ySle4" alt="" /></p>
+                                <p>
+                                    <img src="http://www.plantuml.com/plantuml/svg/ROmn2i9044Nhp2aMhBVGz49s2yzWkMGd8eaxOJOIH6oyYIS8gKGyZvfZQ10K1ylt-E_7SXrgnswZyih5gFQG69UNAwPjy9OgOZKfYWAIZ9dQjs3qhnMnH_wA0yJFLMoGaPfTZLQUBR6gg5qmOW0OklEzFohjgGrwhh97VvNE_75sT32kbTRgrbs6_ZGLF1ES0XWH614O6LWHM17ySle4"
+                                         alt=""/></p>
                                 <p>如上图所示，我们发现，类和对象的依赖关系非常严重，每次一个类中需要使用一个对象时，都需要在该类中new一个对象实例，代码如下：</p>
-                                <pre><code class="java">public class Obj1 {
+                                <pre class="line-numbers"><code class="language-java">public class Obj1 {
     public Obj1(){}
 }
-
 public class A {
     private Obj1 obj1 = new Obj1();//A类依赖于对象1
 }
 </code></pre>
-                                <p>众所周知（其实我忘了，查了资料才知道的<code>[捂脸]</code>），每new一个对象都会占用JVM虚拟机的一部分内存空间，如果一个类需要依赖于多个对象，意味着需要new多个对象的实例，这显然不仅关系错综复杂，而且如果某个对象没有被调用时，还很浪费虚拟机的资源。</p>
+                                <p>众所周知（其实我忘了，查了资料才知道的<code>[捂脸]</code>），每new一个对象都会占用JVM虚拟机的一部分内存空间，如果一个类需要依赖于多个对象，意味着需要new多个对象的实例，这显然不仅关系错综复杂，而且如果某个对象没有被调用时，还很浪费虚拟机的资源。
+                                </p>
                                 <p>现在问题来了，由于各种原因，我们要把某个对象替换掉，或者把某个对象删掉，又或者某个类中不再需要依赖某个对象了，请问我们要改多少处代码？？很显然，非常的麻烦！</p>
                                 <p>这时候，我们就要用到IoC了：</p>
-                                <p><img src="http://www.plantuml.com/plantuml/svg/SoWkIImgAStDuIhEpimhI2nAp5L8paaiBbQevk9qIapEJY_AByrBSSxFoIzIK4vBI-FYT2mgoY-721IbfW1LvHUbf1OX16gHZ2ekIIrApI-fB4XrHZSiCZKd9x_SlIWrDO-BwyNwxSysDYdefkINv-dQAJW-txWRNSm9YvWpI8mBubxFVEUdwtO-dRc2Ao-_95MXA3CzeyHAuLdVygSTsvwkt_bYuyAdw-OzsTVzj6VQqqazBwSqF5lVoCK5iab1LnT9jnE6Y3E621US2HA7c6w8JT08cw0nbqDgNWemp040" alt="" /></p>
+                                <p>
+                                    <img src="http://www.plantuml.com/plantuml/svg/SoWkIImgAStDuIhEpimhI2nAp5L8paaiBbQevk9qIapEJY_AByrBSSxFoIzIK4vBI-FYT2mgoY-721IbfW1LvHUbf1OX16gHZ2ekIIrApI-fB4XrHZSiCZKd9x_SlIWrDO-BwyNwxSysDYdefkINv-dQAJW-txWRNSm9YvWpI8mBubxFVEUdwtO-dRc2Ao-_95MXA3CzeyHAuLdVygSTsvwkt_bYuyAdw-OzsTVzj6VQqqazBwSqF5lVoCK5iab1LnT9jnE6Y3E621US2HA7c6w8JT08cw0nbqDgNWemp040"
+                                         alt=""/></p>
                                 <p>对象交给IoC去创建后，是不是瞬间感觉清爽了很多？</p>
-                                <p>众所周知（没错，我又去查了资料<code>[滑稽]</code>），IoC容器在全局维持一个对象实例集合和类名集合，我们在写某个类的时候把这个类依赖的对象注册到容器里，当我们需要使用某个对象时，IoC会通过Java的<strong>反射机制</strong>来找到这个对象并将该对象实例化出来。</p>
-                                <pre><code class="java">public class Obj1 {
+                                <p>众所周知（没错，我又去查了资料<code>[滑稽]</code>），IoC容器在全局维持一个对象实例集合和类名集合，我们在写某个类的时候把这个类依赖的对象注册到容器里，当我们需要使用某个对象时，IoC会通过Java的<strong>反射机制</strong>来找到这个对象并将该对象实例化出来。
+                                </p>
+                                <pre class="line-numbers"><code class="language-java">public class Obj1 {
     public Obj1(){}
 }
-
 public class A {
     @Autowired
     private Obj1 obj1;//相当于setter，已经实例化
 }
 </code></pre>
-                                <p>因为是通过反射机制实例化对象，所以，当类里注入了好几个对象，只要该对象没有被使用，IoC容器就不会去实例化这个对象，并且在完成调用后，还会自动销毁掉对象实例，从而减少虚拟机的资源占用。</p>
+                                <p>
+                                    因为是通过反射机制实例化对象，所以，当类里注入了好几个对象，只要该对象没有被使用，IoC容器就不会去实例化这个对象，并且在完成调用后，还会自动销毁掉对象实例，从而减少虚拟机的资源占用。</p>
                             </article>
                             <hr>
-                            <div id="lv-container" data-id="city" data-uid="MTAyMC80ODI5Ny8yNDc5MQ=="></div>
+                            <div id="gitalk-container"></div>
+                            <script>
+                                var gitalk = new Gitalk({
+                                    clientID: '7ff38d8c3509efdcee12',   // GitHub Application Client ID
+                                    clientSecret: '01c5373a8f0d16232103c1a3fa78cf1700aba622', // GitHub Application Client Secret
+                                    repo: 'T-miracle.github.io',       // 存放评论的仓库
+                                    owner: 'T-miracle',                // 仓库的创建者，
+                                    admin: ['T-miracle'],              // 如果仓库有多个人可以操作，那么在这里以数组形式写出
+                                    id: md5(location.pathname),         // 用于标记评论是哪个页面的，确保唯一，并且长度小于50
+                                });
+                                gitalk.render('gitalk-container');      // 渲染Gitalk评论组件
+                            </script>
                         </div>
                     </div>
                     <div class="article-aside">
@@ -176,6 +196,7 @@ public class A {
                     </div>
                 </main>
             </div>
+            <script src="../../../../statics/prism/prism.js"></script>
         </div>
         <div id="aplayer"></div>
 
