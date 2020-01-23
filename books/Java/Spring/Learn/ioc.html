@@ -94,9 +94,9 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="../../../../classify.html" class="selected">
+                                <a href="../../../../classify.html">
                                     <svg class="icon" aria-hidden="true">
-                                        <use xlink:href="#icon-classify-active"></use>
+                                        <use xlink:href="#icon-classify"></use>
                                     </svg>
                                     <span>分类</span>
                                 </a>
@@ -174,19 +174,8 @@ public class A {
                                 <p>
                                     因为是通过反射机制实例化对象，所以，当类里注入了好几个对象，只要该对象没有被使用，IoC容器就不会去实例化这个对象，并且在完成调用后，还会自动销毁掉对象实例，从而减少虚拟机的资源占用。</p>
                             </article>
-                            <hr>
+                            <hr class="article-hr">
                             <div id="gitalk-container"></div>
-                            <script>
-                                var gitalk = new Gitalk({
-                                    clientID: '7ff38d8c3509efdcee12',   // GitHub Application Client ID
-                                    clientSecret: '01c5373a8f0d16232103c1a3fa78cf1700aba622', // GitHub Application Client Secret
-                                    repo: 'T-miracle.github.io',       // 存放评论的仓库
-                                    owner: 'T-miracle',                // 仓库的创建者，
-                                    admin: ['T-miracle'],              // 如果仓库有多个人可以操作，那么在这里以数组形式写出
-                                    id: md5(location.pathname),         // 用于标记评论是哪个页面的，确保唯一，并且长度小于50
-                                });
-                                gitalk.render('gitalk-container');      // 渲染Gitalk评论组件
-                            </script>
                         </div>
                     </div>
                     <div class="article-aside">
