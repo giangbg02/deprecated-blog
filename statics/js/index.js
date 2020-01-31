@@ -5,7 +5,7 @@ $(function () {
     $(document).pjax('a', '.main-body', {
         fragment: '.main-body',
         timeout: 5000,
-        cache: false
+        async: false
     }).on('pjax:complete', function () {
         GenerateContentList();
     });
@@ -53,25 +53,27 @@ function GenerateContentList() {
             })
     });
 
-    // 加载gitalk评论系统
-    if ($('#gitalk-container').length > 0) {
-        var gitalk = new Gitalk({
-            clientID: '7ff38d8c3509efdcee12',   // GitHub Application Client ID
-            clientSecret: '01c5373a8f0d16232103c1a3fa78cf1700aba622', // GitHub Application Client Secret
-            repo: 'T-miracle.github.io',       // 存放评论的仓库
-            owner: 'T-miracle',                // 仓库的创建者，
-            admin: ['T-miracle'],              // 如果仓库有多个人可以操作，那么在这里以数组形式写出
-            id: md5(location.pathname),         // 用于标记评论是哪个页面的，确保唯一，并且长度小于50
-        });
-        gitalk.render('gitalk-container');      // 渲染Gitalk评论组件
+    // 匹配加载的页面中是否含有js
+    var regDetectJs = /<script(.|\n)*?>(.|\n|\r\n)*?<\/script>/ig;
+    //ajaxLoadedData为ajax获取到的数据
+    var jsContained = ajaxLoadedData.match(regDetectJs);
+    // 如果包含js，则一段一段的取出js再加载执行
+    if(jsContained) {
+        // 分段取出js正则
+        var regGetJS = /<script(.|\n)*?>((.|\n|\r\n)*)?<\/script>/im;
+        // 按顺序分段执行js
+        var jsNums = jsContained.length;
+        for (var i=0; i<jsNums; i++) {
+            var jsSection = jsContained[i].match(regGetJS);
+            if(jsSection[2]) {
+                if(window.execScript) {
+                    // 给IE的特殊待遇
+                    window.execScript(jsSection[2]);
+                } else {
+                    // 给其他大部分浏览器用的
+                    window.eval(jsSection[2]);
+                }
+            }
+        }
     }
-
-    // 重载高亮代码块
-    if ($('pre').length > 0) {
-        Prism.highlightAll();
-    }
-
-    $("#toc").tocify();
-
-
 }
