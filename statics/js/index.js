@@ -66,4 +66,8 @@ function GenerateContentList() {
         gitalk.render('gitalk-container');      // 渲染Gitalk评论组件
     }
 
+    // 重载高亮代码块
+    if ($('pre').length > 0)
+        Prism.highlightAll();
+
 }
