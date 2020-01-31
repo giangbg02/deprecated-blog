@@ -67,7 +67,8 @@ function GenerateContentList() {
     }
 
     // 重载高亮代码块
-    if ($('pre').length > 0)
+    if ($('pre').length > 0) {
         Prism.highlightAll();
+    }
 
 }

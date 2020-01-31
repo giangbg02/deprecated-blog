@@ -18,7 +18,9 @@ article h3 {
 }
 
 article a {
-    color: inherit;
+    color: inherit !important;
+    position: relative !important;
+    padding-top: 100px !important;
 }
 
 article a:hover {

@@ -7,11 +7,12 @@
         <base target="_self">
         <meta name="description" content="文章">
         <link rel="icon" href="../../../../statics/images/avatar/favicon.ico">
-        <link rel="stylesheet" href="../../../../statics/css/bootstrap.css">
+        <link rel="stylesheet" href="../../../../statics/Bootstrap/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="../../../../statics/css/index.css">
-        <link rel="stylesheet" href="../../../../statics/css/APlayer.min.css">
-        <script type="text/javascript" src="../../../../statics/js/jquery-3.4.1.min.js"></script>
-        <script type="text/javascript" src="../../../../statics/js/jquery.pjax.js"></script><link rel="stylesheet" href="https://cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css">
+        <link rel="stylesheet" href="../../../../statics/APlayer/APlayer.min.css">
+        <script type="text/javascript" src="../../../../statics/JQuery/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="../../../../statics/Pjax/jquery.pjax.js"></script>
+        <link rel="stylesheet" href="https://cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css">
         <script src="https://cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
         <script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
         <script type="text/javascript" src="//at.alicdn.com/t/font_1618477_1g7ditm4cwh.js"></script>
@@ -19,6 +20,7 @@
     <body>
         <div class="main-body">
             <link rel="stylesheet" href="../../../../statics/prism/prism.css">
+            <link rel="stylesheet" href="../../../../statics/tocify/jquery.tocify.css">
             <link rel="stylesheet" href="../../../../statics/css/article.css">
             <div class="container">
                 <header>
@@ -135,12 +137,12 @@
                     <div class="article-main">
                         <div class="article-list">
                             <article>
-                                <h1><a id="ioc概念">IoC概念</a></h1>
-                                <h2><a id="ioc是什么">IoC是什么？</a></h2>
+                                <h1><a id="IoC概念">IoC概念</a></h1>
+                                <h2><a id="IoC是什么？">IoC是什么？</a></h2>
                                 <p><strong>IoC</strong>全名为Inverse of Control，意思为<strong>控制反转</strong></p>
                                 <p>它是Spring容器的内核！！</p>
                                 <p>AOP、声明式事务等功能是建立在IoC的基础上的。</p>
-                                <h2><a id="ioc的概念与作用">IoC的概念与作用</a></h2>
+                                <h2><a id="IoC的概念与作用">IoC的概念与作用</a></h2>
                                 <p>我们先用图来理解一下，没有使用IoC时类和对象的关系：</p>
                                 <p>
                                     <img src="http://www.plantuml.com/plantuml/svg/ROmn2i9044Nhp2aMhBVGz49s2yzWkMGd8eaxOJOIH6oyYIS8gKGyZvfZQ10K1ylt-E_7SXrgnswZyih5gFQG69UNAwPjy9OgOZKfYWAIZ9dQjs3qhnMnH_wA0yJFLMoGaPfTZLQUBR6gg5qmOW0OklEzFohjgGrwhh97VvNE_75sT32kbTRgrbs6_ZGLF1ES0XWH614O6LWHM17ySle4"
@@ -180,16 +182,23 @@ public class A {
                     </div>
                     <div class="article-aside">
                         <div id="aside" class="article-catalog">
-                            <span style="font-weight: bold">此处暂无存放计划~</span><br>
+                            <div id="toc"></div>
                         </div>
                     </div>
                 </main>
             </div>
             <script src="../../../../statics/prism/prism.js"></script>
+            <script src="../../../../statics/JQuery/jquery-ui.min.js"></script>
+            <script src="../../../../statics/tocify/jquery.tocify.js"></script>
+            <script>
+                if ($('#toc').length > 0) {
+                    $("#toc").tocify();
+                }
+            </script>
         </div>
         <div id="aplayer"></div>
 
-        <script src="../../../../statics/js/APlayer.min.js"></script>
+        <script src="../../../../statics/APlayer/APlayer.min.js"></script>
         <script src="../../../../statics/js/APlayer-music-list.js"></script>
         <script type="text/javascript" src="../../../../statics/js/index.js"></script>
     </body>
