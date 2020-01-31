@@ -71,9 +71,7 @@ function GenerateContentList() {
         Prism.highlightAll();
     }
 
-    if ($('#toc').length === 1) {
-        $("#toc").tocify();
-    }
+    $("#toc").tocify();
 
 
 }
