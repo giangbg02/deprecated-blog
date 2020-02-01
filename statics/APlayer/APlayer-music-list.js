@@ -27,7 +27,7 @@ const ap = new APlayer({
             artist: 'DJ Maxwell',
             url: 'https://music.163.com/song/media/outer/url?id=28708061',
             cover: 'http://p1.music.126.net/uIk-PChIFWqPJdnXRrjfeA==/109951163922816713.jpg',
-            lrc: '/statics/music/Its Ok.lrc',
+            lrc: '/statics/music/It\'s Ok.lrc',
             theme: '#d8d2b3'
         }, {
             name: 'Intro: The Dawn',
