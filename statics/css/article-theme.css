@@ -43,6 +43,20 @@
 .theme1 .article-tag {
     color: #787878;
     font-size: small;
+    font-weight: lighter;
     display: flex;
+    flex-wrap: nowrap;
     justify-content: space-around;
+}
+
+.theme1 .article-tag span {
+    width: 33.33333333%;
+}
+
+.theme1 .article-tag a {
+    color: inherit;
+}
+
+.theme1 .article-tag a:hover {
+    text-decoration: none;
 }
