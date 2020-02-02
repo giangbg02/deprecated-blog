@@ -29,7 +29,7 @@ header {
     background-color: rgba(139, 141, 255, 0.95);
     position: fixed;
     top: 0;
-    z-index: 999;
+    z-index: 12345;
     box-shadow: 0 0 10px #c3c3c3;
 }
 
@@ -146,9 +146,8 @@ aside {
     height: 100vh;
     background-color: rgba(240, 240, 240, 0.7);
     position: fixed !important;
-    z-index: 997;
+    z-index: 10086;
     padding: 50px 10px;
-    transition: all 1s;
     overflow: scroll;
     overflow-x: hidden;
     scrollbar-width: none;
@@ -522,11 +521,11 @@ figcaption {
 
 /*音乐播放器*/
 #aplayer {
-    z-index: 10086;
+    z-index: 10010;
 }
 
 .aplayer .aplayer-lrc p {
-    color: #e74c3c !important;
+    color: crimson !important;
 }
 
 .aplayer.aplayer-fixed .aplayer-lrc {
@@ -547,6 +546,7 @@ figcaption {
     scrollbar-color: #C4E538 transparent;
 }
 
+/*layer弹层*/
 .layer-skin {
     background-color: rgba(255, 255, 255, 0.8) !important;
 }

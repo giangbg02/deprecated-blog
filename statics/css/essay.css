@@ -1,8 +1,23 @@
-ul {
+.article-list ul {
     margin-top: 10px;
     margin-bottom: 0;
+    list-style: circle;
 }
 
-hr {
+.article-list ul li {
+   margin-bottom: 10px;
+}
+
+.article-list ul li a {
+    color: indigo;
+    font-weight: lighter;
+}
+
+.article-list hr {
     margin: 10px;
+}
+
+.article-list h2 {
+    text-align: center;
+    color: orangered;
 }
