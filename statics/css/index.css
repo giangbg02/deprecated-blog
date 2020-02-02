@@ -146,7 +146,7 @@ aside {
     height: 100vh;
     background-color: rgba(240, 240, 240, 0.7);
     position: fixed !important;
-    z-index: 10086;
+    z-index: 996;
     padding: 50px 10px;
     overflow: scroll;
     overflow-x: hidden;
@@ -402,6 +402,7 @@ figcaption {
         padding: 0;
         background: #d6d7db;
         box-shadow: 0 0 10px #222f3e;
+        z-index: 10086;
         transition: 0.8s ease-in-out;
     }
 
