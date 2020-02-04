@@ -314,14 +314,15 @@ aside {
 /*主体内容区*/
 main {
     display: flex;
-    margin: 50px 0 0 220px;
-    padding: 0;
+    margin: 0 0 0 220px;
+    padding: 50px 0 0;
     background-color: rgba(240, 240, 240, 0.7);
     height: auto;
+    min-height: 100vh;
 }
 
 .article-main {
-    margin-bottom: 65px;
+    margin-bottom: 90px;
     padding: 0 15px;
     width: 75%;
     height: auto;
@@ -395,14 +396,6 @@ figcaption {
 }
 
 @media (max-width: 992px) {
-    .article-list {
-        margin-top: 65px;
-    }
-
-    .article-aside {
-        margin: 50px 0;
-    }
-
     aside {
         width: 0;
         padding: 0;
