@@ -314,13 +314,14 @@ aside {
 /*主体内容区*/
 main {
     display: flex;
-    margin: 0 0 0 220px;
+    margin: 50px 0 0 220px;
     padding: 0;
     background-color: rgba(240, 240, 240, 0.7);
     height: auto;
 }
 
 .article-main {
+    margin-bottom: 65px;
     padding: 0 15px;
     width: 75%;
     height: auto;
@@ -332,7 +333,7 @@ main {
 }
 
 .article-aside {
-    margin: 50px 0;
+    margin: 0;
     padding: 0;
     width: 25%;
     scrollbar-width: none;
@@ -340,7 +341,7 @@ main {
 
 .article-list {
     display: block;
-    margin: 65px 0;
+    margin: 15px 0;
     padding: 5px 15px;
     background-color: rgba(255, 255, 255, 0.45);
     width: 100%;
@@ -381,7 +382,7 @@ figcaption {
 }
 
 /*响应式布局*/
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
     header {
         max-width: 970px;
     }
@@ -394,6 +395,14 @@ figcaption {
 }
 
 @media (max-width: 992px) {
+    .article-list {
+        margin-top: 65px;
+    }
+
+    .article-aside {
+        margin: 50px 0;
+    }
+
     aside {
         width: 0;
         padding: 0;
