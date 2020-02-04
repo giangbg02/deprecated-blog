@@ -1,8 +1,12 @@
 $("#toc").tocify({
+    context: 'main',
     selectors: 'h2,h3,h4',
-    extendPage: !1,
-    hideEffect: 'slidUp',
+    extendPage: false,
     scrollTo: 50,
-    showAndHide: !0,
-    history: !0
-});
+    showAndHide: true,
+    smoothScroll: true,
+    history: false
+}).data("toc-tocify");
+
+prettyPrint();
+$(".optionName").popover({trigger: "hover"});

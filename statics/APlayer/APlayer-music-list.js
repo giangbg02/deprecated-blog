@@ -5,8 +5,9 @@ const ap = new APlayer({
     lrcType: 3,
     mutex: true,
     order: 'random',
+    preload: 'none',
     listFolded: false,
-    theme: '#e9e9e9',
+    theme: '#ee8243',
     audio: [
         {
             name: 'Time Machine',

@@ -3,26 +3,31 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable='no'">
-        <title>Maokdown | Spring文集</title>
+        <title>Maokdown | 文章</title>
         <base target="_self">
-        <meta name="description" content="Spring文集">
-        <link rel="icon" href="../statics/images/avatar/favicon.ico">
-        <link rel="stylesheet" href="../statics/Bootstrap/bootstrap.css">
-        <link rel="stylesheet" type="text/css" href="../statics/css/index.css">
-        <link rel="stylesheet" href="../statics/APlayer/APlayer.min.css">
-        <script type="text/javascript" src="../statics/JQuery/jquery.js"></script>
-        <script type="text/javascript" src="../statics/Pjax/jquery.pjax.js"></script>
+        <meta name="description" content="文章">
+        <link rel="icon" href="../../statics/images/avatar/favicon.ico">
+        <link rel="stylesheet" href="../../statics/Bootstrap/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="../../statics/css/index.css">
+        <link rel="stylesheet" href="../../statics/APlayer/APlayer.min.css">
+        <script type="text/javascript" src="../../statics/JQuery/jquery.js"></script>
+        <script type="text/javascript" src="../../statics/Pjax/jquery.pjax.js"></script>
+        <link rel="stylesheet" href="../../statics/gitalk/gitalk.css">
+        <script src="../../statics/gitalk/gitalk.min.js"></script>
+        <script src="../../statics/MD5/md5.min.js"></script>
         <script type="text/javascript" src="//at.alicdn.com/t/font_1618477_55grlf4zg63.js"></script>
     </head>
     <body>
         <div class="background-img"></div>
         <div class="main-body">
-            <link rel="stylesheet" type="text/css" href="../statics/css/essay.css">
+            <link rel="stylesheet" href="../../statics/prism/prism.css">
+            <link rel="stylesheet" href="../../statics/tocify/jquery.tocify.css">
+            <link rel="stylesheet" href="../../statics/css/article.css">
             <div class="container">
                 <header>
                     <div class="pull-left header-btn-left">
                         <div id="show-aside-btn" class="avatar">
-                            <img src="../statics/images/avatar/logo-Transparent.png" alt>
+                            <img src="../../statics/images/avatar/logo-Transparent.png" alt>
                         </div>
                     </div>
                     <div class="pull-right header-btn-right">
@@ -45,7 +50,7 @@
                     <div class="personal-info">
                         <div class="personal-avatar">
                             <div class="avatar-img">
-                                <img src="../statics/images/avatar/logo-Transparent.png" alt>
+                                <img src="../../statics/images/avatar/logo-Transparent.png" alt>
                             </div>
                         </div>
                         <div class="personal-username">Tmiracle</div>
@@ -84,7 +89,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="../about-me.html">
+                                <a href="../../about-me.html">
                                     <svg class="icon" aria-hidden="true">
                                         <use xlink:href="#icon-guanyu"></use>
                                     </svg>
@@ -92,15 +97,15 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="../classify.html" class="selected">
+                                <a href="../../classify.html">
                                     <svg class="icon" aria-hidden="true">
-                                        <use xlink:href="#icon-classify-active"></use>
+                                        <use xlink:href="#icon-classify"></use>
                                     </svg>
                                     <span>分类</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="../archive.html">
+                                <a href="../../archive.html">
                                     <svg class="icon" aria-hidden="true">
                                         <use xlink:href="#icon-guidang"></use>
                                     </svg>
@@ -108,7 +113,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="../essay.html">
+                                <a href="../../essay.html">
                                     <svg class="icon" aria-hidden="true">
                                         <use xlink:href="#icon-biji"></use>
                                     </svg>
@@ -116,7 +121,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="../friend-links.html">
+                                <a href="../../friend-links.html">
                                     <svg class="icon" aria-hidden="true">
                                         <use xlink:href="#icon-lianjie"></use>
                                     </svg>
@@ -126,30 +131,74 @@
                         </ul>
                     </nav>
                     <div class="count">
-                        <div>此页面访问量: <span class="num">...</span>次~</div>
+                        <div>此文章阅读量: <span class="num">...</span>次~</div>
                     </div>
                 </aside>
                 <main role="main">
                     <div class="article-main">
                         <div class="article-list">
-                            <h2>Spring</h2>
-                            <ul>
-                                <li><a href="../books/Java/Spring/ioc.html">IoC概念</a></li>
-                            </ul>
+                            <article>
+                                <h1>博客添加APlayer音乐播放器</h1>
+                                <p class="time-info">该文章创建于2020-1-17，最后修改于2020-1-17</p>
+                                <h2>简介</h2>
+                                <p>该项目由一个原bilibili的前端 <del>大佬</del> 巨佬 <a href="https://diygod.me/">Diygod</a> 开源，目前最热门的网站播放器之一，拥有在线歌源、歌词滚动、随机播放等各种常用功能~</p>
+                                <p><a href="https://github.com/MoePlayer/APlayer">项目github地址</a> &amp;&amp; <a href="https://aplayer.js.org/#/zh-Hans/">项目中文文档</a></p>
+                                <h2>使用方式</h2>
+                                <p>前往上面的github地址，clone或者下载到本地，进入目录/dist找到 APlayer.min.css 和 APlayer.min.js 两个文件，复制到你的项目中</p>
+                                <p>然后引用：</p>
+                                <pre class="line-numbers"><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;APlayer.min.css&quot;&gt;
+&lt;div id=&quot;aplayer&quot;&gt;&lt;/div&gt;
+&lt;script src=&quot;APlayer.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+    const ap = new APlayer({
+        container: document.getElementById('aplayer'),
+        fixed: true,                //是否附着页面底部，否为false
+        volume: 0.7,                //初始音量（0~1）
+        lrcType: 3,                 //歌词模式（1、HTML模式 2、js模式 3、lrc文件模式）
+        mutex: true,                //互斥模式：阻止多个播放器同时播放，当前播放器播放时暂停其他播放器
+        order: 'random',            //音频循环顺序（'list'：顺序, 'random'：随机）
+        preload: 'none',            //预加载（'none'：不预加载, 'metadata'：元数据, 'auto'：自动）
+        listFolded: false,          //列表默认折叠，开启为true
+        theme: '#ee8243',           //主题颜色
+        audio: [{
+            name: 'name',           //歌曲名称
+            artist: 'artist',       //歌曲作者
+            url: 'url.mp3',         //歌曲源文件地址
+            cover: 'cover.jpg',     //歌曲封面地址
+            theme: '#eeeeee'        //主题颜色（优先）
+        }]
+    });
+&lt;/script&gt;
+</code></pre>
+                                <h2>如何获取网易云歌曲</h2>
+                                <p><a href="../Notes/get-wangyiyun-music.html">点我前往</a></p>
+                                <h2>如何实现全局播放器（全站无刷新不间断播放）</h2>
+                                <p><a href="#">Pjax教程</a></p>
+
+                            </article>
+                            <hr class="article-hr">
+                            <div id="gitalk-container"></div>
                         </div>
                     </div>
                     <div class="article-aside">
                         <div id="aside" class="article-catalog">
-                            <span style="font-weight: bold">此处暂无存放计划~</span><br>
+                            <div id="toc"></div>
                         </div>
                     </div>
                 </main>
             </div>
+            <script src="../../statics/prism/prism.js"></script>
+            <script src="../../statics/gitalk/gitalk-config.js"></script>
+            <script src="../../statics/tocify/jquery-ui-1.9.1.custom.min.js"></script>
+            <script src="../../statics/Bootstrap/bootstrap.js"></script>
+            <script src="../../statics/tocify/jquery.tocify.js"></script>
+            <script src="../../statics/tocify/prettify.js"></script>
+            <script src="../../statics/tocify/config.js"></script>
         </div>
         <div id="aplayer"></div>
 
-        <script src="../statics/APlayer/APlayer.min.js"></script>
-        <script src="../statics/APlayer/APlayer-music-list.js"></script>
-        <script type="text/javascript" src="../statics/js/index.js"></script>
+        <script src="../../statics/APlayer/APlayer.min.js"></script>
+        <script src="../../statics/APlayer/APlayer-music-list.js"></script>
+        <script type="text/javascript" src="../../statics/js/index.js"></script>
     </body>
 </html>

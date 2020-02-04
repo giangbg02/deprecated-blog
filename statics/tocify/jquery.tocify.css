@@ -54,7 +54,11 @@
 
 /* Twitter Bootstrap Override Style */
 .nav-list > li > a, .nav-list .nav-header {
-    margin: 0px;
+    margin: 0;
+    font-size: smaller;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* Twitter Bootstrap Override Style */

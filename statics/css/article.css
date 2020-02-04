@@ -25,12 +25,21 @@ article img {
 
 article a {
     color: inherit !important;
-    position: relative !important;
-    padding-top: 70px !important;
+}
+
+article a:before {
+    content: '';
+    width: 1px;
+    margin-top: -50px;
+    padding-top: 50px;
 }
 
 article a:hover {
     color: inherit;
+}
+
+article p a {
+    color: indigo !important;
 }
 
 article p {
@@ -51,4 +60,18 @@ article strong {
     font-size: smaller;
     color: grey;
     opacity: 0.66;
+}
+
+.nav-list > .active > a, .nav-list > .active > a:hover {
+    color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+    background-color: #a6a6a6;
+}
+
+.token.operator, .token.entity, .token.url, .language-css .token.string, .style .token.string {
+    background: rgba(255, 255, 255, 0);
+}
+
+.tocify {
+    margin-left: 0;
 }
