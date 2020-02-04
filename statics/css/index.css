@@ -1,18 +1,14 @@
 /*主页面承载*/
-*::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+html::-webkit-scrollbar {
+    width: 0;
+    height: 0;
 }
 
-*::-webkit-scrollbar-thumb {
-    background-color: rgba(68, 68, 68, 0.5);
+html {
+    scrollbar-width: none;
 }
 
-* {
-    scrollbar-width: thin;
-    scrollbar-color: rgba(68, 68, 68, 0.5) transparent;
-}
-
+/*背景图片*/
 .background-img {
     position: fixed;
     width: 100%;

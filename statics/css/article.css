@@ -75,3 +75,16 @@ article strong {
 .tocify {
     margin-left: 0;
 }
+
+pre::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+pre::-webkit-scrollbar-thumb {
+    background-color: rgba(68,68,68,0.5);
+}
+
+pre {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(68,68,68,0.5) transparent;
+}
