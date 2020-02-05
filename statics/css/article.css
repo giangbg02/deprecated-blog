@@ -39,7 +39,7 @@ article a:hover {
 }
 
 article p a {
-    color: indigo !important;
+    color: #0067b9 !important;
 }
 
 article p {
@@ -77,8 +77,8 @@ article strong {
 }
 
 pre::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+    width: 5px;
+    height: 5px;
 }
 pre::-webkit-scrollbar-thumb {
     background-color: rgba(68,68,68,0.5);
