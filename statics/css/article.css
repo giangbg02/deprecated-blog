@@ -24,7 +24,7 @@ article img {
 }
 
 article a {
-    color: inherit !important;
+    color: dodgerblue !important;
 }
 
 article a:before {
@@ -35,11 +35,26 @@ article a:before {
 }
 
 article a:hover {
-    color: inherit;
+    color: dodgerblue !important;
 }
 
-article p a {
-    color: #0067b9 !important;
+article a:hover {
+    border-bottom: 0;
+    padding-bottom: 3px;
+    color: dodgerblue;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 4'%3E%3Cpath fill='none' stroke='dodgerblue' d='M0 3.5c5 0 5-3 10-3s5 3 10 3 5-3 10-3 5 3 10 3'/%3E%3C/svg%3E") repeat-x 0 100%;
+    background-size: 20px auto;
+    text-decoration: none !important;
+    animation: waveMove 1s infinite linear;
+}
+
+@keyframes waveMove {
+    from {
+        background-position: 0 100%;
+    }
+    to {
+        background-position: -20px 100%;
+    }
 }
 
 article p {
@@ -80,11 +95,12 @@ pre::-webkit-scrollbar {
     width: 5px;
     height: 5px;
 }
+
 pre::-webkit-scrollbar-thumb {
-    background-color: rgba(68,68,68,0.5);
+    background-color: rgba(68, 68, 68, 0.5);
 }
 
 pre {
     scrollbar-width: thin;
-    scrollbar-color: rgba(68,68,68,0.5) transparent;
+    scrollbar-color: rgba(68, 68, 68, 0.5) transparent;
 }
