@@ -1,4 +1,5 @@
 article h1 {
+    counter-reset: h2;
     text-align: center;
     font-size: 28px;
     color: #b71540;
@@ -6,15 +7,26 @@ article h1 {
 }
 
 article h2 {
+    counter-reset: h3;
     font-size: 22px;
     color: #e58e26;
     font-weight: bold;
 }
 
+article h2:before {
+    counter-increment: h2;
+    content: counter(h2) ".";
+}
+
 article h3 {
     font-size: 16px;
-    color: #1e3799;
+    color: #706fd3;
     font-weight: bold;
+}
+
+article h3:before {
+    counter-increment: h3;
+    content: counter(h2) "." counter(h3) ".";
 }
 
 article img {
@@ -49,10 +61,10 @@ article a:hover {
 }
 
 @keyframes waveMove {
-    from {
+    0% {
         background-position: 0 100%;
     }
-    to {
+    100% {
         background-position: -20px 100%;
     }
 }

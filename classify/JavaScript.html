@@ -3,31 +3,26 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable='no'">
-        <title>Maokdown | 文章</title>
+        <title>Maokdown | JavaScript文集</title>
         <base target="_self">
-        <meta name="description" content="文章">
-        <link rel="icon" href="../../statics/images/avatar/favicon.ico">
-        <link rel="stylesheet" href="../../statics/Bootstrap/bootstrap.css">
-        <link rel="stylesheet" type="text/css" href="../../statics/css/index.css">
-        <link rel="stylesheet" href="../../statics/APlayer/APlayer.min.css">
-        <script type="text/javascript" src="../../statics/JQuery/jquery.js"></script>
-        <script type="text/javascript" src="../../statics/Pjax/jquery.pjax.js"></script>
-        <link rel="stylesheet" href="../../statics/gitalk/gitalk.css">
-        <script src="../../statics/gitalk/gitalk.min.js"></script>
-        <script src="../../statics/MD5/md5.min.js"></script>
+        <meta name="description" content="JavaScript文集">
+        <link rel="icon" href="../statics/images/avatar/favicon.ico">
+        <link rel="stylesheet" href="../statics/Bootstrap/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="../statics/css/index.css">
+        <link rel="stylesheet" href="../statics/APlayer/APlayer.min.css">
+        <script type="text/javascript" src="../statics/JQuery/jquery.js"></script>
+        <script type="text/javascript" src="../statics/Pjax/jquery.pjax.js"></script>
         <script type="text/javascript" src="//at.alicdn.com/t/font_1618477_d9fc9junc0o.js"></script>
     </head>
     <body>
         <div class="background-img"></div>
         <div class="main-body">
-            <link rel="stylesheet" href="../../statics/prism/prism.css">
-            <link rel="stylesheet" href="../../statics/tocify/jquery.tocify.css">
-            <link rel="stylesheet" href="../../statics/css/article.css">
+            <link rel="stylesheet" type="text/css" href="../statics/css/essay.css">
             <div class="container">
                 <header>
                     <div class="pull-left header-btn-left">
                         <div id="show-aside-btn" class="avatar">
-                            <img src="../../statics/images/avatar/logo-Transparent.png" alt>
+                            <img src="../statics/images/avatar/logo-Transparent.png" alt>
                         </div>
                     </div>
                     <div class="pull-right header-btn-right">
@@ -50,7 +45,7 @@
                     <div class="personal-info">
                         <div class="personal-avatar">
                             <div class="avatar-img">
-                                <img src="../../statics/images/avatar/logo-Transparent.png" alt>
+                                <img src="../statics/images/avatar/logo-Transparent.png" alt>
                             </div>
                         </div>
                         <div class="personal-username">Tmiracle</div>
@@ -89,7 +84,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="../../about-me.html">
+                                <a href="../about-me.html">
                                     <svg class="icon" aria-hidden="true">
                                         <use xlink:href="#icon-guanyu"></use>
                                     </svg>
@@ -97,15 +92,15 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="../../classify.html">
+                                <a href="../classify.html" class="selected">
                                     <svg class="icon" aria-hidden="true">
-                                        <use xlink:href="#icon-fenlei"></use>
+                                        <use xlink:href="#icon-fenlei-active"></use>
                                     </svg>
                                     <span>分类</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="../../archive.html">
+                                <a href="../archive.html">
                                     <svg class="icon" aria-hidden="true">
                                         <use xlink:href="#icon-guidang"></use>
                                     </svg>
@@ -113,7 +108,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="../../essay.html">
+                                <a href="../essay.html">
                                     <svg class="icon" aria-hidden="true">
                                         <use xlink:href="#icon-biji"></use>
                                     </svg>
@@ -121,7 +116,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="../../friend-links.html">
+                                <a href="../friend-links.html">
                                     <svg class="icon" aria-hidden="true">
                                         <use xlink:href="#icon-lianjie"></use>
                                     </svg>
@@ -131,51 +126,35 @@
                         </ul>
                     </nav>
                     <div class="count">
-                        <div>此文章阅读量: <span class="num">...</span>次~</div>
+                        <div>此页面访问量: <span class="num">...</span>次~</div>
                     </div>
                 </aside>
                 <main role="main">
                     <div class="article-main">
                         <div class="article-list">
-                            <article>
-                                <h1>获取网易云的歌曲、封面以及歌词</h1>
-                                <p class="time-info">该文章创建于2020-2-2，最后修改于2020-2-2</p>
-                                <p>首先打开网易云PC版，找到你需要寻找的歌曲，点击进入该页面：</p>
-                                <p><img src="../../statics/images/screenshot/Snipaste_2020-02-02_22-37-25.png" alt="" /></p>
-                                <p>在页面点击鼠标右键，选择“查看框架源代码”，弹出新窗口，找到下面代码：</p>
-                                <p><img src="../../statics/images/screenshot/Snipaste_2020-02-02_22-47-25.png" alt="" /></p>
-                                <h2>获取歌曲</h2>
-                                <p>将上面图片里的歌曲ID复制，填入下面地址后面：</p>
-                                <pre class="line-numbers"><code class="language-text">https://music.163.com/song/media/outer/url?id=歌曲id</code></pre>
-                                <p>即可得获得歌曲源文件</p>
-                                <h2>获取歌词</h2>
-                                <p>将上面的歌曲ID填入下面地址：</p>
-                                <pre class="line-numbers"><code class="language-text">http://music.163.com/api/song/media?id=歌曲id</code></pre>
-                                <p>即可获得该歌曲的歌词json</p>
-                            </article>
-                            <hr class="article-hr">
-                            <div id="gitalk-container"></div>
+                            <h2>JavaScript</h2>
+                            <ul>
+                                <li>
+                                    <a href="../books/JavaScript/use-APlayer.html">博客添加APlayer音乐播放器</a>
+                                </li>
+                                <li>
+                                    <a href="../books/JavaScript/use-Pjax.html">Pjax：实现网站全局音乐播放</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <div class="article-aside">
                         <div id="aside" class="article-catalog">
-                            <div id="toc"></div>
+                            <span style="font-weight: bold">此处暂无存放计划~</span><br>
                         </div>
                     </div>
                 </main>
             </div>
-            <script src="../../statics/prism/prism.js"></script>
-            <script src="../../statics/gitalk/gitalk-config.js"></script>
-            <script src="../../statics/tocify/jquery-ui-1.9.1.custom.min.js"></script>
-            <script src="../../statics/Bootstrap/bootstrap.js"></script>
-            <script src="../../statics/tocify/jquery.tocify.js"></script>
-            <script src="../../statics/tocify/prettify.js"></script>
-            <script src="../../statics/tocify/config.js"></script>
         </div>
         <div id="aplayer"></div>
 
-        <script src="../../statics/APlayer/APlayer.min.js"></script>
-        <script src="../../statics/APlayer/APlayer-music-list.js"></script>
-        <script type="text/javascript" src="../../statics/js/index.js"></script>
+        <script src="../statics/APlayer/APlayer.min.js"></script>
+        <script src="../statics/APlayer/APlayer-music-list.js"></script>
+        <script type="text/javascript" src="../statics/js/index.js"></script>
     </body>
 </html>
